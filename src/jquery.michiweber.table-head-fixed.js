@@ -77,26 +77,33 @@
 			return this[method].call($(this));
 		} else {
 			var table = this.build.call($(this),options);
+			var tableWidth = table.css('width');
+			var tableScrollLeft = table.position().left;
+
 			if($(document).scrollTop() > options.trigger) {
 				table.tfh('show');
 			} else {
 				table.tfh('hide');
 			}
+
 			var resizeTimer;
-			var tableScrollLeft = table.position().left;
-			$(window).scroll(function(){
+			$(window).resize(function(){
+				window.clearInterval(resizeTimer);
+				resizeTimer = window.setInterval(function() {
+					window.clearInterval(resizeTimer);
+					if(tableWidth !== table.css('width')) {
+						tableWidth = table.css('width');
+						table.tfh('kill');
+						table.tfh(options);
+					}
+				}, 1000);
+			}).scroll(function(){
 				if($(document).scrollTop() > options.trigger) {
 					table.tfh('show');
 					table.find('.table-fixed-head-thead').css('left',(tableScrollLeft - $(document).scrollLeft()) + 'px');
 				} else {
 					table.tfh('hide');
 				}
-			}).resize(function(){
-				table.tfh('kill');
-				clearTimeout(resizeTimer);
-				resizeTimer = setTimeout(function(){
-					table.tfh(options);
-				}, 250);
 			});
 		}
 	}
