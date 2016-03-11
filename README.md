@@ -22,7 +22,7 @@ $('table').tfh([options]);
 
 Option | Default value | Default automated value | Description
 ------------ | ------------- | ------------- | -------------
-toggle | 0 | 0 | The top value on scrolling when the *&lt;thead&gt;* gets fixed
+trigger | 0 | 0 | The top value on scrolling when the *&lt;thead&gt;* gets fixed
 top | 0 | top position of the table | The defaultop value on scrolling when the *&lt;thead&gt;* gets fixed
 
 ### Set options via attribute
@@ -31,7 +31,7 @@ You can use the plug-in without writing a line of javascript code. To set the op
 
 Option | Attribute
 ------------ | ------------- | ------------- | -------------
-toggle | data-table-fixed-head-trigger
+trigger | data-table-fixed-head-trigger
 top | data-table-fixed-head-top
 
 Example:
