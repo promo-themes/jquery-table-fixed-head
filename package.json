@@ -1,0 +1,10 @@
+{
+  "name": "query-table-fixed-head",
+  "description": "jQuery Plug-In: Table fixed head",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/michiweber/jquery-table-fixed-head"
+  },
+  "main": "dist/jquery.michiweber.table-head-fixed.min"
+}
