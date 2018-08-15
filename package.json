@@ -6,5 +6,5 @@
   "repository": {
     "url": "https://github.com/michiweber/jquery-table-fixed-head"
   },
-  "main": "dist/jquery.michiweber.table-head-fixed.min"
+  "main": "src/jquery.michiweber.table-head-fixed"
 }
