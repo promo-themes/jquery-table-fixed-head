@@ -100,7 +100,7 @@
 			}).scroll(function(){
 				if($(document).scrollTop() > options.trigger) {
 					table.tfh('show');
-					table.find('.table-fixed-head-thead').css('left',(tableScrollLeft - $(document).scrollLeft()) + 'px');
+					//table.find('.table-fixed-head-thead').css('left',(tableScrollLeft - $(document).scrollLeft()) + 'px');
 				} else {
 					table.tfh('hide');
 				}
